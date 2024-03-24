@@ -30,14 +30,43 @@ div h1{
     font-size: 24px;
     line-height: 36px;
     font-weight: 600;
-    color: #000000;
+    color: #fff;
     margin-bottom: 4px;
 }
 
 div strong{
-    color: blue;
+    font-size: 14px;
+    line-height: 21px;
+    color: #C4F824;
+}
+
+div p{
+    font-size: 14px;
+    line-height: 21px;
+    margin-block: 24px;
+}
+
+div a{
+    display: block;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #333333;
+}
+
+div a:hover{
+    background-color: #C4F824;
+    color: #141414;
+    transition: 0.7s;
+}
+
+div a + a{
+    margin-top: 16px;
 }
 
 h1, p, a{
-    color: #ffff;
+    color: #fff;
 }
