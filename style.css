@@ -13,12 +13,23 @@ body{
     align-items: center;
 }
 
+body.light{
+    background-color: #d4d4d4;
+    transition: 0.7s;
+}
+
 div{
     background-color: #1f1f1f;
+    transition: 0.7s;
     width: 384px;
     border-radius: 12px;
     padding: 40px;
     text-align: center;
+}
+
+div.light{
+    background-color: #d4d4d4;
+    transition: 0.7s;
 }
 
 div img{
@@ -40,33 +51,78 @@ div strong{
     color: #C4F824;
 }
 
+div strong.light{
+    font-size: 14px;
+    line-height: 21px;
+    color: #ae0ee8a9;
+    transition: 0.7s;
+}
+
+div button{
+    display: block;
+    text-align: center;
+}
+
 div p{
     font-size: 14px;
     line-height: 21px;
     margin-block: 24px;
 }
 
+div ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+div li{
+    list-style: none;
+}
+
 div a{
-    display: block;
     text-decoration: none;
-    padding: 12px;
+}
+
+div li{
     border-radius: 8px;
+    display: block;
+    padding: 12px;
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
     background-color: #333333;
 }
 
-div a:hover{
+div li:hover{
     background-color: #C4F824;
     color: #141414;
-    transition: 0.7s;
+    transition: background 0.2s;
 }
 
-div a + a{
-    margin-top: 16px;
+div li.light{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(174, 14, 232, 0.5);
+    border-radius: 8px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+div li.light:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid #ae0ee8a9;
+    color: #ae0ee8a9;
+    transition: background 0.2s;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 h1, p, a{
     color: #fff;
+    transition: 0.7;
+}
+
+h1.light, p.light, a.light{
+    color: #141414;
 }
