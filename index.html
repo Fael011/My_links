@@ -11,16 +11,18 @@
     <script src="script.js" defer></script>
     <title>Meus links</title>
 </head>
-<body>
+<body class="light">
     <div>
         <img src="assets/image_perfil.jpg" alt="Um aluno se se formando, passando na rampa com uma beca preta">
         <h1>Rafael Lima Viana</h1>
         <strong>São Paulo, Brasil</strong>
 
-        <button id="lightMode"><img src="assets/sun.svg" alt="darkMode"></button>
-        <button id="darkMode"><img src="assets/moon-stars.svg" alt=""></button>
+        <p>Desenvolvedor Front-End</p>
 
-        <p>Desenvolvedor Front-End viciado em ver as aulas do Márcio</p>
+        <div id="switch" onclick="toggleMode()">
+            <button></button>
+            <span></span>
+        </div>
 
         <ul>
             <li class="dark"><a href="https://github.com/dashboard"  target="_blank">GitHub</a></li>

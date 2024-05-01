@@ -5,31 +5,44 @@
     font-family: "Inter", sans-serif;
 }
 
+:root{
+    --bg: #141414;
+    --bg-div: #1f1f1f;
+    --text-color: #ffffff;
+    --link: #333333;
+    --link-hover: #C4F824;
+    --switch-bg-url: url(assets/sun.svg);
+}
+
+.light{
+    --bg: #ede6e6;
+    --bg-div: #ffffff;
+    --text-color: #000000;
+    --link: #33333336;
+    --link-hover: rgb(184, 23, 242);
+    --switch-bg-url: url(assets/moon-stars.svg);
+}
+
 body{
-    background-color: #141414;
+    background-color: var(--bg);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-body.light{
-    background-color: #d4d4d4;
-    transition: 0.7s;
-}
-
 div{
-    background-color: #1f1f1f;
+    background-color: var(--bg-div);
     transition: 0.7s;
-    width: 384px;
     border-radius: 12px;
     padding: 40px;
     text-align: center;
 }
 
-div.light{
-    background-color: #d4d4d4;
-    transition: 0.7s;
+
+h1, p, a{
+    color: var(--text-color);
+    transition: 0.7;
 }
 
 div img{
@@ -41,32 +54,57 @@ div h1{
     font-size: 24px;
     line-height: 36px;
     font-weight: 600;
-    color: #fff;
     margin-bottom: 4px;
 }
 
 div strong{
     font-size: 14px;
     line-height: 21px;
-    color: #C4F824;
-}
-
-div strong.light{
-    font-size: 14px;
-    line-height: 21px;
-    color: #ae0ee8a9;
-    transition: 0.7s;
-}
-
-div button{
-    display: block;
-    text-align: center;
+    color: var(--link-hover);
 }
 
 div p{
     font-size: 14px;
     line-height: 21px;
-    margin-block: 24px;
+    margin-block: 10px;
+}
+
+#switch{
+    padding: 20px 0px;
+    width: 64px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#switch button{
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    background: #ffffff var(--switch-bg-url) no-repeat center;
+    border: none;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+    transition: 0.5s;
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background-color: var(--link);
+    border: 1px solid var(--link-hover);
+    border-radius: 999px;
 }
 
 div ul{
@@ -77,6 +115,7 @@ div ul{
 
 div li{
     list-style: none;
+    padding-inline: 100px;
 }
 
 div a{
@@ -85,44 +124,23 @@ div a{
 
 div li{
     border-radius: 8px;
-    display: block;
-    padding: 12px;
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
-    background-color: #333333;
+    background-color: var(--link);
 }
 
 div li:hover{
-    background-color: #C4F824;
-    color: #141414;
+    background-color: var(--link-hover);
     transition: background 0.2s;
 }
 
-div li.light{
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(174, 14, 232, 0.5);
-    border-radius: 8px;
-
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+div a{
+    display: block;
+    padding: 12px;
 }
 
-div li.light:hover{
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1.5px solid #ae0ee8a9;
-    color: #ae0ee8a9;
-    transition: background 0.2s;
-
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-}
-
-h1, p, a{
-    color: #fff;
-    transition: 0.7;
-}
-
-h1.light, p.light, a.light{
-    color: #141414;
+div a:hover{
+    color: var(--bg);
+    transition: 0.2s;
 }
